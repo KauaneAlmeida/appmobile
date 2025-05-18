@@ -4,8 +4,6 @@ import { styles } from './style';
 export default function SessionHome() {
   const simulateNavigation = (screen: string) => {
     Alert.alert('Navegação simulada', `Você clicou em: ${screen}`);
-    // Exemplo futuro:
-    // router.push('/screens/Sessions/Day1')
   };
 
   return (
@@ -15,7 +13,6 @@ export default function SessionHome() {
 
       {/* Plano de Dias */}
       <View style={styles.planContainer}>
-        {/* Dia 1 */}
         <TouchableOpacity onPress={() => simulateNavigation('Day 1 - Flexibility Awakening')}>
           <Image source={require('../../assets/images/day1.png')} style={styles.cardImage} />
           <View style={styles.cardOverlay}>
@@ -25,7 +22,6 @@ export default function SessionHome() {
           </View>
         </TouchableOpacity>
 
-        {/* Dia 2 */}
         <TouchableOpacity onPress={() => simulateNavigation('Day 2 - Upper Body Stretch')}>
           <Image source={require('../../assets/images/day2.png')} style={styles.cardImage} />
           <View style={styles.cardOverlay}>
@@ -53,8 +49,49 @@ export default function SessionHome() {
         <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Stretch for Men')}>
           <Text style={styles.categoryText}>Stretch for Men</Text>
         </TouchableOpacity>
+        
         <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Pain Relief')}>
           <Text style={styles.categoryText}>Pain Relief</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('After Exercise')}>
+          <Text style={styles.categoryText}>After Exercise</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Morning Wake-up')}>
+          <Text style={styles.categoryText}>Morning Wake-up</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Before Bedtime')}>
+          <Text style={styles.categoryText}>Before Bedtime</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Target Area')}>
+          <Text style={styles.categoryText}>Target Area</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Full Body Stretch')}>
+          <Text style={styles.categoryText}>Full Body Stretch</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('For Beginner')}>
+          <Text style={styles.categoryText}>For Beginner</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Posture')}>
+          <Text style={styles.categoryText}>Posture</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Office Pain Relief')}>
+          <Text style={styles.categoryText}>Office Pain Relief</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Touch Feet Challenge')}>
+          <Text style={styles.categoryText}>Touch Feet Challenge</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.categoryCard} onPress={() => simulateNavigation('Core Strength')}>
+          <Text style={styles.categoryText}>Core Strength</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

@@ -52,10 +52,13 @@ export const styles = StyleSheet.create({
     marginTop: 24,
     marginBottom: 12,
   },
-  grid: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
+    grid: {
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'space-between',
+  rowGap: 12, // se desejar espaçamento vertical entre as linhas
+},
+
   labCardPink: {
     backgroundColor: '#f8b6b6',
     borderRadius: 12,
