@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles/perfil';
 
 const levels = [
-  { label: 'Beginner', image: require('../assets/images/beginner.png') },
-  { label: 'Intermediate', image: require('../assets/images/intermediate.png') },
-  { label: 'Expert', image: require('../assets/images/expert.png') },
+  { label: 'Beginner', image: require('../../../assets/images/beginner.png') },
+  { label: 'Intermediate', image: require('../../../assets/images/intermediate.png') },
+  { label: 'Expert', image: require('../../../assets/images/expert.png') },
 ];
 
 export default function Perfil() {
@@ -43,7 +43,7 @@ export default function Perfil() {
           !selectedLevel && styles.continueButtonDisabled,
         ]}
         disabled={!selectedLevel}
-        onPress={() => router.push('/calendario')}
+        onPress={() => router.push('/screens/Onboarding/calendario')}
       >
         <Text style={styles.continueText}>CONTINUE</Text>
       </TouchableOpacity>

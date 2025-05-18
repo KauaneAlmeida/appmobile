@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import { styles } from './styles/duration';
 import { useRouter } from 'expo-router';
+import React, { useState } from 'react';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/duration';
 
 const options = [
   'Up To 5 Minutes',
@@ -16,7 +16,7 @@ export default function Duration() {
 
   const handleSelect = (option: string) => {
     setSelected(option);
-    router.push('/StretchTime'); // Certifique-se de que StretchTime.tsx está em `app/`
+    router.push('/screens/Onboarding/StretchTime'); // Certifique-se de que StretchTime.tsx está em `app/`
   };
 
   return (

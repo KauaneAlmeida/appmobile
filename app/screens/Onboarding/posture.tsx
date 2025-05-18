@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { styles } from './styles/posture';
 import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/posture';
 
 const postures = [
   {
     label: 'Hunchback',
-    image: require('../assets/images/hunchback.png'),
+    image: require('../../../assets/images/hunchback.png'),
   },
   {
     label: 'Leaning Tower',
-    image: require('../assets/images/leaning-tower.png'),
+    image: require('../../../assets/images/leaning-tower.png'),
   },
   {
     label: 'Anterior Pelvic Tilt',
-    image: require('../assets/images/anterior-pelvic-tilt.png'),
+    image: require('../../../assets/images/anterior-pelvic-tilt.png'),
   },
   {
     label: 'None',
-    image: require('../assets/images/none-back.png'),
+    image: require('../../../assets/images/none-back.png'),
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Posture() {
           !selectedPosture && styles.continueButtonDisabled,
         ]}
         disabled={!selectedPosture}
-        onPress={() => router.push('/gender')}
+        onPress={() => router.push('/screens/Onboarding/gender')}
       >
         <Text style={styles.continueText}>CONTINUE</Text>
       </TouchableOpacity>

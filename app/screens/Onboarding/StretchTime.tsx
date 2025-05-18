@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { styles } from './styles/stretchTime';
 import { useRouter } from 'expo-router';
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/stretchTime';
 
 const stretchOptions = [
-  { label: 'After Waking Up', icon: require('../assets/images/sun.png') },
-  { label: 'After Morning Coffee or Tea', icon: require('../assets/images/coffee.png') },
-  { label: 'Before & After Exercising', icon: require('../assets/images/exercise.png') },
-  { label: 'Before Bedtime', icon: require('../assets/images/bed.png') },
-  { label: 'During Work Break', icon: require('../assets/images/break.png') },
-  { label: 'No Preference', icon: require('../assets/images/no-preference.png') },
+  { label: 'After Waking Up', icon: require('../../../assets/images/sun.png') },
+  { label: 'After Morning Coffee or Tea', icon: require('../../../assets/images/coffee.png') },
+  { label: 'Before & After Exercising', icon: require('../../../assets/images/exercise.png') },
+  { label: 'Before Bedtime', icon: require('../../../assets/images/bed.png') },
+  { label: 'During Work Break', icon: require('../../../assets/images/break.png') },
+  { label: 'No Preference', icon: require('../../../assets/images/no-preference.png') },
 ];
 
 export default function StretchTime() {
@@ -18,7 +18,7 @@ export default function StretchTime() {
 
   const handleSelect = (option: string) => {
     setSelected(option);
-    router.push('/FinalStep'); 
+    router.push('/screens/Onboarding/FinalStep'); 
   };
 
   return (

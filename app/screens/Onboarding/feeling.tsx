@@ -1,5 +1,5 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles/feeling';
 
 
@@ -9,7 +9,7 @@ export default function FeelingScreen() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/feeling.png')} // substitua pelo caminho da sua imagem real
+        source={require('../../../assets/images/feeling.png')} // substitua pelo caminho da sua imagem real
         style={styles.image}
         resizeMode="cover"
       />
@@ -23,10 +23,10 @@ export default function FeelingScreen() {
         </Text>
 
         <View style={styles.buttons}>
-          <TouchableOpacity style={styles.noButton} onPress={() => router.push('/feelingSecond')}>
+          <TouchableOpacity style={styles.noButton} onPress={() => router.push('/screens/Onboarding/feelingSecond')}>
             <Text style={styles.noText}>NO</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.yesButton} onPress={() => router.push('/feelingSecond')}>
+          <TouchableOpacity style={styles.yesButton} onPress={() => router.push('/screens/Onboarding/feelingSecond')}>
             <Text style={styles.yesText}>YES</Text>
           </TouchableOpacity>
         </View>

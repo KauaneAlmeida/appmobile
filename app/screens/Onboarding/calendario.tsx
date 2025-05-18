@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { router } from 'expo-router';
-import { styles } from './styles/calendario';
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from '../Onboarding/styles/calendario';
 
 const injuries = [
-  { label: 'None', key: 'none', icon: require('../assets/images/none.png') },
-  { label: 'Spine', key: 'spine', icon: require('../assets/images/spine.png') },
-  { label: 'Wrist', key: 'wrist', icon: require('../assets/images/wrist.png') },
-  { label: 'Knee', key: 'knee', icon: require('../assets/images/knee.png') },
-  { label: 'Ankle', key: 'ankle', icon: require('../assets/images/ankle.png') },
+  { label: 'None', key: 'none', icon: require('../../../assets/images/none.png') },
+  { label: 'Spine', key: 'spine', icon: require('../../../assets/images/spine.png') },
+  { label: 'Wrist', key: 'wrist', icon: require('../../../assets/images/wrist.png') },
+  { label: 'Knee', key: 'knee', icon: require('../../../assets/images/knee.png') },
+  { label: 'Ankle', key: 'ankle', icon: require('../../../assets/images/ankle.png') },
 ];
 
 export default function Calendario() {
@@ -58,7 +58,7 @@ export default function Calendario() {
           selected.length === 0 && styles.continueButtonDisabled,
         ]}
         disabled={selected.length === 0}
-        onPress={() => router.push('/posture')}
+        onPress={() => router.push('/screens/Onboarding/posture')}
       >
         <Text style={styles.continueText}>CONTINUE</Text>
       </TouchableOpacity>

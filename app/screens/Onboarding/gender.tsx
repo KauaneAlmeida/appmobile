@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { styles } from './styles/gender';
 import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/gender';
 
 const genders = [
-  { label: 'Male', key: 'male', icon: require('../assets/images/male.png') },
-  { label: 'Female', key: 'female', icon: require('../assets/images/female.png') },
+  { label: 'Male', key: 'male', icon: require('../../../assets/images/male.png') },
+  { label: 'Female', key: 'female', icon: require('../../../assets/images/female.png') },
   { label: 'Prefer Not to Say', key: 'unspecified', icon: null }, // Ícone opcional
 ];
 
@@ -41,7 +41,7 @@ export default function GenderScreen() {
           !selected && styles.continueButtonDisabled,
         ]}
         disabled={!selected}
-        onPress={() => router.push('/range')}
+        onPress={() => router.push('/screens/Onboarding/range')}
       >
         <Text style={styles.continueText}>CONTINUE</Text>
       </TouchableOpacity>

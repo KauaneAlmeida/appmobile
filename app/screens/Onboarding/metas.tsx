@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles/metas';
 
 const goals = [
@@ -62,7 +62,7 @@ export default function Metas() {
           selectedGoals.length === 0 && styles.continueButtonDisabled,
         ]}
         disabled={selectedGoals.length === 0}
-        onPress={() => router.push('/perfil')}
+        onPress={() => router.push('/screens/Onboarding/perfil')}
       >
         <Text style={styles.continueText}>CONTINUE</Text>
       </TouchableOpacity>

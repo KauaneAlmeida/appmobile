@@ -1,14 +1,14 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { styles } from './styles/finalStep';
 import { useRouter } from 'expo-router';
+import React from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/finalStep';
 
 export default function FinalStep() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/background.png')} style={styles.image} resizeMode="cover" />
+      <Image source={require('../../../assets/images/background.png')} style={styles.image} resizeMode="cover" />
 
       <View style={styles.overlay}>
         <Text style={styles.title}>
@@ -26,7 +26,7 @@ export default function FinalStep() {
         </View>
 
         {/* Botão CONTINUE */}
-        <TouchableOpacity style={styles.button} onPress={() => router.push('/AllAge')}>
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/screens/Onboarding/AllAge')}>
           <Text style={styles.buttonText}>CONTINUE</Text>
         </TouchableOpacity>
       </View>

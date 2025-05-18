@@ -1,34 +1,34 @@
-import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { styles } from './styles/feelingTwo';
+import React from 'react';
+import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/feelingThree';
 
-export default function FeelingSecond() {
+export default function PosturePrompt() {
   const router = useRouter();
 
   return (
     <ImageBackground
-      source={require('../assets/images/feelingtwo.png')}
+      source={require('../../../assets/images/feelingThree.png')} // seu PNG aqui
       style={styles.background}
       resizeMode="cover"
     >
       <View style={styles.overlay}>
         <View style={styles.content}>
           <Text style={styles.question}>
-            Want to enjoy a life <Text style={styles.highlight}>free from tension and stress?</Text>
+            Ready to improve <Text style={styles.highlight}>posture and relieve pain?</Text>
           </Text>
         </View>
 
         <View style={styles.buttonsContainer}>
           <TouchableOpacity style={styles.buttonNo}>
-            <Text style={styles.buttonTextNo}>BAD</Text>
+            <Text style={styles.buttonTextNo}>NO</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.buttonYes}
-            onPress={() => router.push('/feelingThree')}
+            onPress={() => router.push('/Sessions/SessionHome')} // ou outra rota desejada
           >
-            <Text style={styles.buttonTextYes}>GOOD</Text>
+            <Text style={styles.buttonTextYes}>YES</Text>
           </TouchableOpacity>
         </View>
       </View>
