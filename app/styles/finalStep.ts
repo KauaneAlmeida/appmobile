@@ -42,14 +42,18 @@ export const styles = StyleSheet.create({
     marginTop: 4,
   },
   button: {
-    backgroundColor: '#38EF7D',
-    borderRadius: 100,
-    paddingVertical: 16,
-    alignItems: 'center',
+  marginTop: 30,
+  backgroundColor: '#6EE7B7',
+  paddingVertical: 14,
+  paddingHorizontal: 40,
+  borderRadius: 30,
+  alignItems: 'center',
+},
+buttonText: {
+  color: '#fff',
+  fontWeight: 'bold',
+  fontSize: 16,
+},
+
   },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-});
+);

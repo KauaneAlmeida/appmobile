@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles/finalStep';
+import { useRouter } from 'expo-router';
 
 export default function FinalStep() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Image source={require('../assets/images/background.png')} style={styles.image} resizeMode="cover" />
@@ -21,6 +24,11 @@ export default function FinalStep() {
             ✅ Personalized plans designed specifically for you.
           </Text>
         </View>
+
+        {/* Botão CONTINUE */}
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/AllAge')}>
+          <Text style={styles.buttonText}>CONTINUE</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
