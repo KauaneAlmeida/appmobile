@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   height: '100%',
   position: 'absolute',
   },
-  
+
   overlay: {
     position: 'absolute',
     width,
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     paddingHorizontal: 20,
-    paddingBottom: 50,
+    paddingBottom: 32,
   },
   question: {
     color: '#fff',
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
     textAlign: 'center',
-    marginBottom: 50,
+    marginBottom: 57,
   },
   highlightYellow: {
     color: '#FFD600',
@@ -48,14 +48,14 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#fff',
     borderRadius: 30,
-    paddingVertical: 12,
-    paddingHorizontal: 32,
+    paddingVertical: 14,
+    paddingHorizontal: 62,
   },
   yesButton: {
     backgroundColor: '#00FF99',
     borderRadius: 30,
-    paddingVertical: 12,
-    paddingHorizontal: 32,
+    paddingVertical: 14,
+    paddingHorizontal: 62,
   },
   noText: {
     color: '#fff',

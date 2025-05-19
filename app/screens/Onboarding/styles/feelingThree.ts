@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.5)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
@@ -40,10 +40,10 @@ export const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 20,
+    marginBottom: 40,
   },
   buttonNo: {
-    flex: 1,
+    width: 150,
     marginRight: 10,
     paddingVertical: 14,
     borderRadius: 30,
@@ -52,13 +52,14 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonYes: {
-    flex: 1,
+   width: 150,
     marginLeft: 10,
     paddingVertical: 14,
     borderRadius: 30,
     backgroundColor: '#4ADE80',
     alignItems: 'center',
   },
+  
   buttonTextNo: {
     color: '#fff',
     fontWeight: 'bold',
