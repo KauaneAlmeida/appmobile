@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     position: 'absolute',
+    
   },
   overlay: {
     flex: 1,
@@ -16,11 +17,14 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#000',
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#fff',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 30,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
   },
   card: {
     backgroundColor: 'white',

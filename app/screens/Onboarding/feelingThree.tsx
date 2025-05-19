@@ -8,7 +8,7 @@ export default function PosturePrompt() {
 
   return (
     <ImageBackground
-      source={require('../../../assets/images/feelingThree.png')} // seu PNG aqui
+      source={require('../../../assets/images/feelingThree.png')} 
       style={styles.background}
       resizeMode="cover"
     >

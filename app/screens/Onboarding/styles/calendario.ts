@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 32,
+    marginBottom: 62,
   },
   card: {
     flexDirection: 'row',
@@ -23,17 +23,20 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
     justifyContent: 'flex-start',
     gap: 16,
+    backgroundColor: '#f0f0f0',
   },
   cardSelected: {
-    borderColor: '#6C63FF',
-    backgroundColor: '#f0f0ff',
+    borderColor: '#0077c2',
+    backgroundColor: '#b3e5fc',
   },
   cardText: {
     fontSize: 18,
     fontWeight: '600',
+    color: '#333',
   },
   cardTextSelected: {
-    color: '#6C63FF',
+    color: '#0077c2',
+    fontWeight: 'bold',
   },
   icon: {
     width: 32,
@@ -41,14 +44,19 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   continueButton: {
-    backgroundColor: '#6C63FF',
+    backgroundColor: '#2dd27e',
     padding: 16,
     borderRadius: 10,
     alignItems: 'center',
     marginTop: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 4,
   },
   continueButtonDisabled: {
-    backgroundColor: '#ccc',
+    backgroundColor: '#cccccc',
   },
   continueText: {
     color: '#fff',

@@ -21,14 +21,14 @@ export default function FeelingSecond() {
 
         <View style={styles.buttonsContainer}>
           <TouchableOpacity style={styles.buttonNo}>
-            <Text style={styles.buttonTextNo}>BAD</Text>
+            <Text style={styles.buttonTextNo}>NO</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.buttonYes}
             onPress={() => router.push('/screens/Onboarding/feelingThree')}
           >
-            <Text style={styles.buttonTextYes}>GOOD</Text>
+            <Text style={styles.buttonTextYes}>YES</Text>
           </TouchableOpacity>
         </View>
       </View>

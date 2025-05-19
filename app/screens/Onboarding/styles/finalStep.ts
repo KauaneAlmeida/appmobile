@@ -21,10 +21,13 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: '#111',
+    fontWeight: '600',
+    color: '#fff',
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: 30,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
   },
   card: {
     backgroundColor: '#fff',
@@ -36,6 +39,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 8,
+    textAlign: 'center'
   },
   cardText: {
     fontSize: 14,
@@ -43,7 +47,7 @@ export const styles = StyleSheet.create({
   },
   button: {
   marginTop: 30,
-  backgroundColor: '#6EE7B7',
+  backgroundColor: '#2dd27e',
   paddingVertical: 14,
   paddingHorizontal: 40,
   borderRadius: 30,

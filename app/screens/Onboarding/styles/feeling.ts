@@ -9,10 +9,11 @@ export const styles = StyleSheet.create({
     position: 'relative',
   },
   image: {
-    width,
-    height,
-    position: 'absolute',
+  width: '100%',
+  height: '100%',
+  position: 'absolute',
   },
+  
   overlay: {
     position: 'absolute',
     width,
@@ -29,8 +30,11 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 24,
     fontWeight: '600',
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: 50,
   },
   highlightYellow: {
     color: '#FFD600',

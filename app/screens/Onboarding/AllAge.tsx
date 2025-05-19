@@ -15,7 +15,7 @@ export default function AllAge() {
 
         <View style={styles.card}>
           <Text style={styles.cardText}>
-            Based on your info, we've tailored a plan specifically for you, aged{' '}
+            Based on your info, we've tailored a plan specifically for you, aged {' '}
             <Text style={styles.highlight}>20–30</Text>
           </Text>
         </View>

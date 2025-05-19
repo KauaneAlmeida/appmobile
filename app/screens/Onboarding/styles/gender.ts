@@ -3,52 +3,64 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
-    justifyContent: 'center',
+    padding: 32, // aumentado
     backgroundColor: '#fff',
+    justifyContent: 'center',
   },
   title: {
-    fontSize: 24,
+    fontSize: 28, // aumentado
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 12,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 16, // aumentado
     textAlign: 'center',
-    marginBottom: 24,
     color: '#666',
+    marginBottom: 32,
   },
-  card: {
+  genderRow: {
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 24, // aumentado
+  },
+  genderOption: {
     alignItems: 'center',
-    padding: 16,
-    borderRadius: 12,
+    width: '42%',
+  },
+  genderOptionFull: {
+    alignItems: 'center',
+    paddingVertical: 18, // aumentado
+    marginVertical: 16, // aumentado
     borderWidth: 1,
     borderColor: '#ccc',
-    marginBottom: 12,
+    borderRadius: 14,
+    width: '100%',
   },
-  cardSelected: {
-    borderColor: '#4CAF50',
-    backgroundColor: '#E8F5E9',
+
+  genderImage: {
+    width: 200, 
+    height: 200, 
+    resizeMode: 'contain',
   },
-  icon: {
-    width: 40,
-    height: 40,
-    marginRight: 12,
+  genderLabel: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#000',
+    top: 1,
   },
-  cardText: {
-    fontSize: 18,
-  },
-  cardTextSelected: {
+  genderLabelSelected: {
     fontWeight: 'bold',
     color: '#2E7D32',
   },
+  genderSelected: {
+    borderColor: '#4CAF50',
+  },
   continueButton: {
-    marginTop: 20,
-    padding: 16,
+    marginTop: 32, // aumentado
+    paddingVertical: 20, // aumentado
+    borderRadius: 10,
     backgroundColor: '#4CAF50',
-    borderRadius: 8,
     alignItems: 'center',
   },
   continueButtonDisabled: {
@@ -57,6 +69,6 @@ export const styles = StyleSheet.create({
   continueText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 18, // aumentado
   },
 });
