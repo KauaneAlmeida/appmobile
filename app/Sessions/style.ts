@@ -207,4 +207,47 @@ labText: {
     textShadowRadius: 4,
   },
 
+  playIcon: {
+  width: 40,
+  height: 40,
+  position: 'absolute',
+  bottom: 10,
+  right: 10,
+  tintColor: 'white', 
+},
+
+
+
+lockedOverlay: {
+  ...StyleSheet.absoluteFillObject,
+  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 12,
+},
+
+lockIcon: {
+  width: 40,
+  height: 40,
+  tintColor: '#fff',
+},
+
+progressBarContainer: {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+  height: 6,
+  backgroundColor: '#555',
+  borderBottomLeftRadius: 12,
+  borderBottomRightRadius: 12,
+  overflow: 'hidden',
+},
+
+progressBar: {
+  height: '100%',
+  backgroundColor: '#00C676',
+},
+
+
 });

@@ -1,38 +1,98 @@
-import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Image, Alert, ImageBackground } from 'react-native';
-import { styles } from './style'; // ajusta o caminho se necessário
-
+import React, { useState } from 'react';
+import { View, Text, ScrollView, TouchableOpacity, Image, Alert, Animated, ImageBackground  } from 'react-native';
+import { styles } from './style';
 export default function SessionHome() {
+  const [scale1] = useState(new Animated.Value(1));
+  const [scale2] = useState(new Animated.Value(1));
+
   const simulateNavigation = (screen: string) => {
     Alert.alert('Navegação simulada', `Você clicou em: ${screen}`);
   };
 
-  
-  return (
-    <View style={{ flex: 1 }}>
-      <ScrollView style={styles.container}>
-        {/* Título */}
-        <Text style={styles.title}>28-DAY PLAN</Text>
+  const handlePressIn = (scale: Animated.Value) => {
+    Animated.spring(scale, {
+      toValue: 2,
+      useNativeDriver: true,
+    }).start();
+  };
 
-        {/* Plano de Dias */}
-        <View style={styles.planContainer}>
-          <TouchableOpacity onPress={() => simulateNavigation('Day 1 - Flexibility Awakening')}>
+  const handlePressOut = (scale: Animated.Value) => {
+    Animated.spring(scale, {
+      toValue: 1,
+      friction: 4,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  return (
+   <View style={{ flex: 1 }}>
+  <ScrollView style={styles.container}>
+    <Text style={styles.title}>28-DAY PLAN</Text>
+
+    <View style={styles.planContainer}>
+      {/* CARD 1 - Desbloqueado e completo */}
+      <TouchableOpacity
+        onPressIn={() => handlePressIn(scale1)}
+        onPressOut={() => handlePressOut(scale1)}
+        activeOpacity={1}
+      >
+        <Animated.View style={{ transform: [{ scale: scale1 }] }}>
+          <View style={{ position: 'relative' }}>
             <Image source={require('../../assets/images/day1.png')} style={styles.cardImage} />
             <View style={styles.cardOverlay}>
               <Text style={styles.dayBadge}>Day 1</Text>
               <Text style={styles.cardTime}>7 Mins</Text>
               <Text style={styles.cardTitle}>Flexibility Awakening</Text>
+              <Image source={require('../../assets/images/play.png')} style={styles.playIcon} />
             </View>
-          </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => simulateNavigation('Day 2 - Upper Body Stretch')}>
-            <Image source={require('../../assets/images/day2.png')} style={styles.cardImage} />
-            <View style={styles.cardOverlay}>
-              <Text style={styles.dayBadge}>Day 2</Text>
-              <Text style={styles.cardTime}>6 Mins</Text>
-              <Text style={styles.cardTitle}>Upper Body Stretch</Text>
+            {/* Barra de progresso preenchida */}
+            <View style={styles.progressBarContainer}>
+              <View style={[styles.progressBar, { width: '100%' }]} />
             </View>
-          </TouchableOpacity>
+          </View>
+        </Animated.View>
+      </TouchableOpacity>
+
+      {/* CARD 2 - Bloqueado */}
+      <TouchableOpacity
+        activeOpacity={1}
+        onPress={() => Alert.alert('Bloqueado', 'Conclua o dia anterior para desbloquear')}
+      >
+        <View style={{ position: 'relative' }}>
+          <Image source={require('../../assets/images/day2.png')} style={styles.cardImage} />
+          <View style={styles.cardOverlay}>
+            <Text style={styles.dayBadge}>Day 2</Text>
+            <Text style={styles.cardTime}>6 Mins</Text>
+            <Text style={styles.cardTitle}>Upper Body Stretch</Text>
+            <Image source={require('../../assets/images/play.png')} style={styles.playIcon} />
+          </View>
+
+          {/* Overlay escuro + cadeado */}
+          <View style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            borderRadius: 12,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+            <Image
+              source={require('../../assets/images/lock.png')}
+              style={{ width: 40, height: 40, tintColor: '#fff', marginBottom: 4 }}
+            />
+          </View>
+
+          {/* Barra de progresso 0% */}
+          <View style={styles.progressBarContainer}>
+            <View style={[styles.progressBar, { width: '0%' }]} />
+          </View>
+        </View>
+      </TouchableOpacity>
+
         </View>
 
         {/* Wellness Labs */}
