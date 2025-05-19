@@ -249,5 +249,13 @@ progressBar: {
   backgroundColor: '#00C676',
 },
 
+durationTitle: {
+  fontSize: 16,
+  fontWeight: 'bold',
+  marginTop: 10,
+  marginBottom: 5,
+  color: '#333',
+},
+
 
 });

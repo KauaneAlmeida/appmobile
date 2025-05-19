@@ -92,6 +92,52 @@ durationScroll: {
 },
 
 
+
+
+navbar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingVertical: 8,
+    backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderTopColor: '#eee',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+
+  navItem: {
+    alignItems: 'center',
+  },
+
+  navIcon: {
+    width: 24,
+    height: 24,
+    marginBottom: 2,
+    tintColor: 'rgba(100, 100, 100, 0.6)',
+  },
+
+  navLabel: {
+    fontSize: 12,
+    color: '#aaa',
+  },
+
+  navLabelActive: {
+    fontSize: 12,
+    color: '#00C282',
+    fontWeight: '600',
+  },
+  
+ labCard: {
+  width: 160,
+  height: 120,
+  borderRadius: 12,
+  overflow: 'hidden',
+  margin: 8,
+},
+
 });
 
 

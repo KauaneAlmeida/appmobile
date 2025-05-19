@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';  // Corrigido para usar useRouter
 import styles from './SessionLibrary.styles';
 
 const categories = [
@@ -45,53 +46,75 @@ const stretches = [
 ];
 
 const SessionLibrary = () => {
-  return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.header}>LIBRARY</Text>
+  const router = useRouter();  // Hook para navegação
 
-      {/* Categories */}
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
-        {categories.map((item, index) => (
-          <View style={styles.categoryItem} key={index}>
-            <Image source={item.image} style={styles.categoryImage} />
-            <Text style={styles.categoryLabel}>{item.name}</Text>
+  return (
+    <View style={{ flex: 1 }}>
+      <ScrollView style={styles.container}>
+        <Text style={styles.header}>LIBRARY</Text>
+
+        {/* Categories */}
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
+          {categories.map((item, index) => (
+            <View style={styles.categoryItem} key={index}>
+              <Image source={item.image} style={styles.categoryImage} />
+              <Text style={styles.categoryLabel}>{item.name}</Text>
+            </View>
+          ))}
+        </ScrollView>
+
+        {/* Duration Filters */}
+        <View style={styles.durationWrapper}>
+          <Text style={styles.sectionTitle}>Duration</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.durationScroll}>
+            {durations.map((d, i) => (
+              <TouchableOpacity style={styles.filterButton} key={i}>
+                <Text style={styles.filterText}>{d}</Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        </View>
+
+        {/* Stretch Sections */}
+        {stretches.map((section, i) => (
+          <View key={i} style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionTitle}>{section.section}</Text>
+              <Text style={styles.sectionAll}>All ›</Text>
+            </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {section.data.map((card, idx) => (
+                <View style={styles.card} key={idx}>
+                  <Image source={card.image} style={styles.cardImage} />
+                  {card.time ? <Text style={styles.cardTime}>{card.time}</Text> : null}
+                  {card.title ? <Text style={styles.cardTitle}>{card.title}</Text> : null}
+                </View>
+              ))}
+            </ScrollView>
           </View>
         ))}
       </ScrollView>
 
-      {/* Duration Filters - agora em coluna */}
-<View style={styles.durationWrapper}>
-  <Text style={styles.sectionTitle}>Duration</Text>
-  <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.durationScroll}>
-    {durations.map((d, i) => (
-      <TouchableOpacity style={styles.filterButton} key={i}>
-        <Text style={styles.filterText}>{d}</Text>
-      </TouchableOpacity>
-    ))}
-  </ScrollView>
-</View>
-
-
-      {/* Stretch Sections */}
-      {stretches.map((section, i) => (
-        <View key={i} style={styles.section}>
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>{section.section}</Text>
-            <Text style={styles.sectionAll}>All ›</Text>
-          </View>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {section.data.map((card, idx) => (
-              <View style={styles.card} key={idx}>
-                <Image source={card.image} style={styles.cardImage} />
-                {card.time ? <Text style={styles.cardTime}>{card.time}</Text> : null}
-                {card.title ? <Text style={styles.cardTitle}>{card.title}</Text> : null}
-              </View>
-            ))}
-          </ScrollView>
-        </View>
-      ))}
-    </ScrollView>
-
+      {/* Navbar inferior fixa */}
+      <View style={styles.navbar}>
+        <TouchableOpacity onPress={() => router.push('/Sessions/SessionHome')} style={styles.navItem}>
+          <Image source={require('../../assets/images/home.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/SessionLibrary')} style={styles.navItem}>
+          <Image source={require('../../assets/images/library.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Library</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/custom')} style={styles.navItem}>
+          <Image source={require('../../assets/images/custom.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Custom</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/profile')} style={styles.navItem}>
+          <Image source={require('../../assets/images/profile.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Profile</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
