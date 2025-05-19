@@ -174,9 +174,29 @@ export default function SessionHome() {
             <ImageBackground source={require('../../assets/images/core-strength.png')} style={styles.imageCard} imageStyle={styles.imageCardRadius}>
               <Text style={styles.labText}>Core Strength</Text>
             </ImageBackground>
-          </TouchableOpacity>
+               </TouchableOpacity>
         </View>
       </ScrollView>
+
+      {/* Navbar inferior fixa */}
+      <View style={styles.navbar}>
+        <TouchableOpacity onPress={() => router.push('/Sessions/SessionHome')} style={styles.navItem}>
+          <Image source={require('../../assets/images/home.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/SessionLibrary')} style={styles.navItem}>
+          <Image source={require('../../assets/images/library.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Library</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/custom')} style={styles.navItem}>
+          <Image source={require('../../assets/images/custom.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Custom</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/Sessions/profile')} style={styles.navItem}>
+          <Image source={require('../../assets/images/profile.png')} style={styles.navIcon} />
+          <Text style={styles.navLabel}>Profile</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
-}
+};

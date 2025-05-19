@@ -94,13 +94,13 @@ const SessionLibrary = () => {
           </View>
         ))}
       </ScrollView>
-
+ 
       {/* Navbar inferior fixa */}
       <View style={styles.navbar}>
         <TouchableOpacity onPress={() => router.push('/Sessions/SessionHome')} style={styles.navItem}>
-          <Image source={require('../../assets/images/home.png')} style={styles.navIcon} />
-          <Text style={styles.navLabel}>Home</Text>
-        </TouchableOpacity>
+         <Image source={require('../../assets/images/home.png')} style={styles.navIcon} />
+       <Text style={styles.navLabel}>Home</Text>
+          </TouchableOpacity>
         <TouchableOpacity onPress={() => router.push('/Sessions/SessionLibrary')} style={styles.navItem}>
           <Image source={require('../../assets/images/library.png')} style={styles.navIcon} />
           <Text style={styles.navLabel}>Library</Text>
