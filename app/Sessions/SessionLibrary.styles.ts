@@ -39,12 +39,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 8,
     marginBottom: 10,
+    marginHorizontal: 5,
   },
   filterText: {
     color: '#00B77F',
     fontWeight: '500',
     fontSize: 14,
   },
+
+
+  
   section: {
     marginBottom: 24,
   },

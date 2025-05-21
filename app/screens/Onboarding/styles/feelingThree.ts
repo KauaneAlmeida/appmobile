@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     width,
     height,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
   },
   content: {
     flex: 1,

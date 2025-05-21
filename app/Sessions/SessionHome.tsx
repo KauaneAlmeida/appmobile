@@ -177,8 +177,9 @@ export default function SessionHome() {
                </TouchableOpacity>
         </View>
       </ScrollView>
+0
+      /* Navbar */
 
-      {/* Navbar inferior fixa */}
       <View style={styles.navbar}>
         <TouchableOpacity onPress={() => router.push('/Sessions/SessionHome')} style={styles.navItem}>
           <Image source={require('../../assets/images/home.png')} style={styles.navIcon} />
